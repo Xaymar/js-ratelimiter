@@ -28,11 +28,18 @@ type RateLimiterAsyncExecutor = (...args: any[]) => Promise<any>;
 type RateLimiterSyncExecutor = (...args: any[]) => any;
 type RateLimiterExecutor = RateLimiterSyncExecutor | RateLimiterAsyncExecutor;
 
+/** A simple but effective way to rate limit Tasks.
+ *
+ */
 export default class RateLimiter {
 	private _maximum: number = 0;
 	private _available: number = 0;
 	private _instances: any[];
 
+	/** Create a new instance of a RateLimiter.
+	 *
+	 * @param limit The maximum number of tasks that should run in parallel. The Default is 2/3rds of the available CPU threads.
+	 */
 	constructor(limit?: number) {
 		if (!limit) {
 			this._maximum = Math.ceil(Math.max(1, os.cpus().length / 3 * 2));
@@ -43,6 +50,12 @@ export default class RateLimiter {
 		this._instances = [];
 	}
 
+	/** Queue up a new task.
+	 *
+	 * @param executor The function that should be run eventually.
+	 * @param args Optional arguments to pass to the function.
+	 * @returns A Promise that resolves with the result of the function.
+	 */
 	async queue(executor: RateLimiterExecutor, ...args: any[]) {
 		// Use async/await to find a free slot.
 		while (this._available == 0) {
