@@ -1,7 +1,14 @@
 {
   "name": "@xaymar/ratelimiter",
-  "version": "0.1.0",
+  "author": "Michael Fabian 'Xaymar' Dirks <info@xaymar.com>",
   "description": "A simple but effective way to rate limit Tasks in JavaScript.",
+  "license": "GPLv3",
+  "repository": "https://github.com/Xaymar/js-ratelimiter",
+  "version": "0.2.0",
+  "funding": {
+	"type": "patreon",
+	"url": "https://www.patreon.com/xaymar"
+  },
   "main": "generated/ratelimiter.js",
   "scripts": {
     "lint": "npx eslint ./source --ext .ts,.mts",
@@ -11,8 +18,6 @@
 	"prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Michael Fabian 'Xaymar' Dirks <info@xaymar.com>",
-  "license": "GPLv3",
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^18.15.3",
