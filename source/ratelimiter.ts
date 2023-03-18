@@ -24,11 +24,11 @@ interface RateLimiterInstance {
     solver?: Promise<any>,
 }
 
-export type RateLimiterAsyncExecutor = (...args: any[]) => Promise<any>;
-export type RateLimiterSyncExecutor = (...args: any[]) => any;
-export type RateLimiterExecutor = RateLimiterSyncExecutor | RateLimiterAsyncExecutor;
+type RateLimiterAsyncExecutor = (...args: any[]) => Promise<any>;
+type RateLimiterSyncExecutor = (...args: any[]) => any;
+type RateLimiterExecutor = RateLimiterSyncExecutor | RateLimiterAsyncExecutor;
 
-export class RateLimiter {
+export default class RateLimiter {
 	private _maximum: number = 0;
 	private _available: number = 0;
 	private _instances: any[];
