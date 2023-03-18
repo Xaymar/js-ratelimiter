@@ -1,0 +1,24 @@
+{
+  "name": "@xaymar/ratelimiter",
+  "version": "0.1.0",
+  "description": "A simple but effective way to rate limit Tasks in JavaScript.",
+  "main": "generated/ratelimiter.js",
+  "scripts": {
+    "lint": "npx eslint ./source --ext .ts,.mts",
+    "fix": "npx eslint ./source --ext .ts,.mts --fix",
+    "compile": "npx tsc",
+    "build": "npm run fix && npm run compile",
+	"prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Fabian 'Xaymar' Dirks <info@xaymar.com>",
+  "license": "GPLv3",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.27.0",
+    "typescript": "^4.9.3"
+  }
+}

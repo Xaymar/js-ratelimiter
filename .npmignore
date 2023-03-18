@@ -1,0 +1,16 @@
+# Git
+/.git
+/.gitignore
+
+# Node, NPM, ESLint, TypeScript
+/node_modules
+/.eslintignore
+/.eslintrc.json
+/tsconfig.json
+/*.tgz
+.tsbuildinfo
+
+# Development files
+/.editorconfig
+/.vscode
+/workspace.code-workspace
