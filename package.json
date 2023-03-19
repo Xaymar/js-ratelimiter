@@ -4,7 +4,7 @@
   "description": "A simple but effective way to rate limit Tasks in JavaScript.",
   "license": "GPLv3",
   "repository": "https://github.com/Xaymar/js-ratelimiter",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "funding": {
 	"type": "patreon",
 	"url": "https://www.patreon.com/xaymar"
