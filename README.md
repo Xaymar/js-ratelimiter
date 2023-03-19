@@ -8,7 +8,7 @@ Simple but effective way to rate limit Tasks in JavaScript. Anything can be rate
 
 ## Usage
 ```js
-var RateLimiter = require("@xaymar/ratelimiter");
+var { RateLimiter } = require("@xaymar/ratelimiter");
 
 let limitMany = new RateLimiter(4);
 let limitOne = new RateLimiter(1);
@@ -40,7 +40,7 @@ No, but it is relatively easy to do without official support. See the example be
 
 ```js
 // main.js
-var RateLimiter = require("@xaymar/ratelimiter");
+var { RateLimiter } = require("@xaymar/ratelimiter");
 
 let worker = new Worker("worker.js");
 let workerRL = new RateLimiter(1);

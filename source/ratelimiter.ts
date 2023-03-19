@@ -31,7 +31,7 @@ type RateLimiterExecutor = RateLimiterSyncExecutor | RateLimiterAsyncExecutor;
 /** A simple but effective way to rate limit Tasks.
  *
  */
-export default class RateLimiter {
+export class RateLimiter {
 	private _maximum: number = 0;
 	private _available: number = 0;
 	private _instances: any[];
